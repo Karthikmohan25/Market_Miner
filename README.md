@@ -1,6 +1,14 @@
 # MarketMiner 🚀
 
-MarketMiner is a modern web application that helps entrepreneurs and e-commerce sellers discover and validate product ideas using data aggregated from online marketplaces (Amazon, eBay), Google Trends, and Shopify stores.
+[![GitHub Stars](https://img.shields.io/github/stars/Karthikmohan25/Ecommerce_proj?style=for-the-badge)](https://github.com/Karthikmohan25/Ecommerce_proj)
+[![GitHub Forks](https://img.shields.io/github/forks/Karthikmohan25/Ecommerce_proj?style=for-the-badge)](https://github.com/Karthikmohan25/Ecommerce_proj)
+[![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)](LICENSE)
+[![Python](https://img.shields.io/badge/Python-3.8+-blue?style=for-the-badge&logo=python)](https://python.org)
+[![React](https://img.shields.io/badge/React-18+-blue?style=for-the-badge&logo=react)](https://reactjs.org)
+
+MarketMiner is a modern AI-powered web application that helps entrepreneurs and e-commerce sellers discover and validate product ideas using data aggregated from online marketplaces (Amazon, eBay), Google Trends, and Shopify stores.
+
+![MarketMiner Demo](https://via.placeholder.com/800x400/1f2937/ffffff?text=MarketMiner+AI+Chat+Interface)
 
 ## ✨ Features
 
@@ -198,6 +206,51 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ---
 
+## 🌐 Live Demo
+
+Try MarketMiner live: [Coming Soon - Deploy to Vercel]
+
+## 🤝 Contributing
+
+We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature-name`
+3. Commit your changes: `git commit -am 'Add feature'`
+4. Push to the branch: `git push origin feature-name`
+5. Submit a pull request
+
+## 📊 Project Stats
+
+- **40+ Files**: Complete full-stack application
+- **AI-Powered**: Natural language processing and recommendations
+- **Modern Stack**: React + Python Flask + SQLite
+- **Production Ready**: Docker support and deployment configs
+
+## 🐛 Issues & Support
+
+Found a bug or have a feature request? Please [open an issue](https://github.com/Karthikmohan25/Ecommerce_proj/issues).
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- Built with modern web technologies
+- Powered by OpenAI for intelligent analysis
+- Google Trends for market insights
+- Beautiful UI with Tailwind CSS
+- Icons by Lucide React
+
+## ⭐ Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Karthikmohan25/Ecommerce_proj&type=Date)](https://star-history.com/#Karthikmohan25/Ecommerce_proj&Date)
+
+---
+
 **Ready to mine some data?** 🎯 Start discovering your next winning product!
+
+Made with ❤️ by [Karthik Mohan](https://github.com/Karthikmohan25)
 
 
