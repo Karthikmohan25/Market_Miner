@@ -278,7 +278,6 @@ class MarketplaceScraper:
             
             
         except Exception as e:
-            print(f"Error scraping Amazon: {e}")
         
         # If we didn't get enough products, supplement with mock data
         if len(products) < 5:
@@ -384,7 +383,6 @@ class MarketplaceScraper:
             
             
         except Exception as e:
-            print(f"Error scraping eBay: {e}")
         
         # If we didn't get enough products, supplement with mock data
         if len(products) < 5:
@@ -426,6 +424,5 @@ class MarketplaceScraper:
             
             
         except Exception as e:
-            print(f"Error searching Shopify stores: {e}")
         
         return stores

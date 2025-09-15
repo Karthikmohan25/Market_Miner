@@ -6,6 +6,7 @@ from app.services.trends import TrendsAnalyzer
 from app.services.ai_analyzer import AIAnalyzer
 from app.services.image_service import image_service
 
+chat_bp = Blueprint('chat', __name__)
 
 class ConversationalAI:
     """Advanced conversational AI for product discovery"""

@@ -3,6 +3,7 @@ from app.services.scraper import MarketplaceScraper
 from app.models.product import Product
 import json
 
+search_bp = Blueprint('search', __name__)
 
 @search_bp.route('/products', methods=['POST'])
 def search_products():
@@ -45,10 +46,12 @@ def search_products():
                 try:
                     product_model.save_product(product)
                 except Exception as e:
+                    print(f"Error saving product: {e}")
             
             try:
                 product_model.cache_results(query, platform, json.dumps(products))
             except Exception as e:
+                print(f"Error caching results: {e}")
                 
             all_products.extend(products)
         
