@@ -13,6 +13,11 @@ const ChatBox = ({ onSearch, isLoading }) => {
       timestamp: new Date()
     }
   ]);
+  const [conversationContext, setConversationContext] = useState({
+    lastQuery: '',
+    lastProducts: [],
+    conversationHistory: []
+  });
   const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const messagesEndRef = useRef(null);
@@ -42,9 +47,20 @@ const ChatBox = ({ onSearch, isLoading }) => {
     setIsTyping(true);
 
     try {
+      console.log('🚀 Sending message:', inputValue.trim());
+      console.log('📝 Context:', conversationContext);
+      
+      // Add conversation context to the request
+      const requestData = {
+        message: inputValue.trim(),
+        context: conversationContext
+      };
+      
       // Process the natural language query via API
-      const response = await processChatMessage(inputValue.trim());
+      const response = await processChatMessage(requestData);
       const data = response.data;
+      
+      console.log('✅ Received response:', data);
       
       // Add AI response
       setTimeout(() => {
@@ -54,17 +70,28 @@ const ChatBox = ({ onSearch, isLoading }) => {
           content: data.ai_response,
           timestamp: new Date(),
           products: data.products,
-          searchQuery: data.processed_query?.search_query
+          searchQuery: data.search_query
         };
         
         setMessages(prev => [...prev, aiMessage]);
         setIsTyping(false);
 
-        // Trigger search if we have a query
-        if (data.should_search && data.processed_query?.search_query && onSearch) {
-          onSearch(data.processed_query.search_query, {
-            platforms: data.processed_query.platforms,
-            priceRange: data.processed_query.price_constraints
+        // Update conversation context with the actual products and query
+        setConversationContext(prev => ({
+          lastQuery: data.search_query || prev.lastQuery,
+          lastProducts: data.products || prev.lastProducts,
+          conversationHistory: [...prev.conversationHistory, {
+            user: inputValue.trim(),
+            ai: data.ai_response,
+            timestamp: new Date()
+          }].slice(-5) // Keep last 5 exchanges
+        }));
+
+        // Trigger search if needed (for external search functionality)
+        if (data.should_search && data.search_query && onSearch) {
+          onSearch(data.search_query, {
+            platforms: ['Amazon', 'eBay'],
+            priceRange: {}
           });
         }
       }, 800 + Math.random() * 800); // Simulate AI thinking time

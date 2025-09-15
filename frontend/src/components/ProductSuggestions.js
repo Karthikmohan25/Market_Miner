@@ -123,8 +123,8 @@ const ProductSuggestions = ({ products, title = "Recommended Products" }) => {
 
               {/* Quick Stats */}
               <div className="flex justify-between text-xs text-gray-400 pt-1">
-                <span>Market Score: {Math.floor(Math.random() * 30) + 70}/100</span>
-                <span>Trending: +{Math.floor(Math.random() * 50) + 10}%</span>
+                <span>Market Score: {product.market_score || 85}/100</span>
+                <span>Trending: {product.trending_percentage || '+15%'}</span>
               </div>
             </div>
           </div>

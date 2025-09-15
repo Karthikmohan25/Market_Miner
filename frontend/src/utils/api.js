@@ -77,10 +77,13 @@ export const calculateScore = (products, trendData = null) => {
   });
 };
 
-export const processChatMessage = (message) => {
-  return api.post('/api/chat/process', {
-    message
-  });
+export const processChatMessage = (messageData) => {
+  // Handle both string and object formats
+  const payload = typeof messageData === 'string' 
+    ? { message: messageData }
+    : messageData;
+    
+  return api.post('/api/chat/process', payload);
 };
 
 export default api;
