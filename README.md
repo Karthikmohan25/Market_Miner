@@ -1,6 +1,6 @@
 # MarketMiner 🚀 
 
-**Contributors:** [Karthik Mohan](https://github.com/Karthikmohan25) • [Anish Kanade](https://github.com/AnishKanade) • [Tariqul Islam](https://github.com/nickelburger)]
+**Contributors:** [[Karthik Mohan](https://github.com/Karthikmohan25) • [Anish Kanade](https://github.com/AnishKanade) • [Tariqul Islam](https://github.com/nickelburger)]
 
 [![GitHub Stars](https://img.shields.io/github/stars/Karthikmohan25/Ecommerce_proj?style=for-the-badge)](https://github.com/Karthikmohan25/Ecommerce_proj)
 [![GitHub Forks](https://img.shields.io/github/forks/Karthikmohan25/Ecommerce_proj?style=for-the-badge)](https://github.com/Karthikmohan25/Ecommerce_proj)
